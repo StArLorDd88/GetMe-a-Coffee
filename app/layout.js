@@ -2,7 +2,8 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Metadata } from 'next'
+
+
 import {
   ClerkProvider
 } from '@clerk/nextjs'
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
         <body
           className={`${geistSans.variable}`}>
           <Navbar />
-          <div className="min-h-[89vh] bg-neutral-900">
+          <div className="min-h-[88vh] bg-neutral-900">
             <div className="absolute inset-0 bg-amber-800 bg-[size:20px_20px] opacity-20 blur-[100px] pointer-events-none"></div>
             {children}
           </div>
@@ -33,4 +34,4 @@ export default function RootLayout({ children }) {
       </html>
     </ClerkProvider>
   );
-}
+} 

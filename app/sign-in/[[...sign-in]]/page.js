@@ -1,7 +1,9 @@
-import { SignIn } from '@clerk/nextjs'
+import { SignIn } from '@clerk/nextjs';
 
-const page = () => {
-  return <SignIn />
+export default function Page() {
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <SignIn redirectUrl="/profile" />
+    </div>
+  );
 }
-
-export default page
